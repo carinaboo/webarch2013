@@ -1,3 +1,3 @@
-1
+1. I have good background in writing HTML and CSS. I've made my own website (carinaboo.com) with HTML, CSS, and very basic PHP. I know very basic Javascript and I've used jQuery before for animations. This was all self-taught though so I don't know much about the ins and outs of browsers and what all happens in browser rendering, communicating with servers, and tradeoffs of different web technology, etc. So I'm really excited to learn all about it in this class!
 
-2
+2. I've use Chrome, Firefox, Safari, and Rockmelt before. My favorite feature for Chrome is the combined search and URL bar where I can directly start searching from the browser without going to google.com. I also really like Developer tools, which I use a lot for debugging. I also really like the Users feature in Chrome where I can create Users for browsing--I use this a lot for work where I want the browser to remember different logins/passwords, settings, and cookies. In Firefox, my favorite feature is bookmark keywords. It's a relatively hidden feature but it lets me set a keyword shortcut like "info253" into the browser URL field and it goes to the bookmarked URL.
