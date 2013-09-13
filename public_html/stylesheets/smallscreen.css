@@ -1,0 +1,14 @@
+@media screen and (max-width: 900px) {
+	.activity {
+		width: 100%;
+		margin-bottom: 20px;
+		float: none;
+		padding: 20px;
+	}
+	.activity img {
+		max-height: 600px;
+		max-width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+}
