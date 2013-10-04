@@ -1,0 +1,79 @@
+
+1
+harbinger:~$ telnet localhost $FLASK_PORT
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+GET /home?name=Carina%20Boo&title=Hello HTTP/1.1
+host: localhost
+
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 236
+Server: Werkzeug/0.8.3 Python/2.7.3
+Date: Fri, 04 Oct 2013 09:28:54 GMT
+
+<!DOCTYPE html>
+<html lang="en-us">
+     <head>
+          <meta charset="utf-8">
+          <title>Hello</title>
+          <link rel="stylesheet" href="static/css/default.css">
+     </head>
+     <body>
+          <div class="container">
+               Hello Carina Boo
+          </div>
+     </body>
+</html>Connection closed by foreign host.
+
+
+2
+harbinger:~$ telnet localhost $FLASK_PORT
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+PUT /wiki HTTP/1.1
+Host: localhost
+Content-Length: 21
+Content-Type: application/x-www-form-urlencoded
+
+url=http://disney.com
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 32
+Server: Werkzeug/0.8.3 Python/2.7.3
+Date: Fri, 04 Oct 2013 09:33:53 GMT
+
+Stored wiki => http://disney.comConnection closed by foreign host.
+
+// Verified by looking at http://people.ischool.berkeley.edu/~carinaboo/server/wiki
+
+
+3
+harbinger:~$ telnet localhost $FLASK_PORT
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+PUT /wiki HTTP/1.1
+Host: localhost
+Content-Length: 18
+Content-Type: application/x-www-form-urlencoded
+
+url=http://nyt.com
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 29
+Server: Werkzeug/0.8.3 Python/2.7.3
+Date: Fri, 04 Oct 2013 09:49:14 GMT
+
+Stored wiki => http://nyt.comConnection closed by foreign host.
+
+// Verified by looking at http://people.ischool.berkeley.edu/~carinaboo/server/wiki
+
+
+4
+Changed line 77 to resp.headers['Content-Type'] = 'image/png'
+
+Went to http://people.ischool.berkeley.edu/~carinaboo/server/i253 
+Madlib image says: "My friends Jim said i253 was fun"
