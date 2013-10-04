@@ -17,7 +17,7 @@ db = shelve.open("shorten.db")
 # Only supports the GET method, returns a homepage represented as HTML
 ###
 @app.route('/home', methods=['GET'])
-def home():
+def home():f
     """Builds a template based on a GET request, with some default
     arguements"""
     index_title = request.args.get("title", "i253")
