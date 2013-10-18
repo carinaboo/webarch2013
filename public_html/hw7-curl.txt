@@ -1,0 +1,8 @@
+
+Compressed
+curl -H 'Accept-Encoding: gzip' www.yelp.com > compressed.txt
+20 KB
+
+Uncompressed
+curl www.yelp.com > uncompressed.txt﻿
+92 KB
