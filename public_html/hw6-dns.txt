@@ -1,0 +1,310 @@
+1
+
+host -v m.yelp.com 199.7.83.42 (root name server)
+host -v m.yelp.com 192.5.6.30
+host -v m.yelp.com 208.78.70.18
+
+ANSWER SECTION:
+m.yelp.com.		60	IN	A	199.255.189.34
+m.yelp.com.		60	IN	A	198.51.132.234
+m.yelp.com.		60	IN	A	199.255.189.234
+m.yelp.com.		60	IN	A	198.51.132.34
+
+
+
+
+
+2
+
+199.255.189.234
+198.51.132.234
+198.51.132.34
+199.255.189.34
+
+
+
+
+
+3
+
+No, all within berkeley.edu network
+
+Command: 
+traceroute amplab.cs.berkeley.edu
+
+Output:
+traceroute to amplab.cs.berkeley.edu (128.32.37.248), 30 hops max, 60 byte packets
+ 1  g3-35.inr-211-srb.Berkeley.EDU (128.32.78.3)  1.196 ms  1.203 ms  1.226 ms
+ 2  t6-1.inr-202-reccev.Berkeley.EDU (128.32.255.126)  0.892 ms  0.955 ms  1.007 ms
+ 3  evans-eecs-br-10GE.EECS.Berkeley.EDU (128.32.255.54)  5.959 ms  5.926 ms  5.956 ms
+ 4  soda-10g-edge.EECS.Berkeley.EDU (169.229.59.242)  2.864 ms  2.935 ms  2.959 ms
+ 5  www-research2.CS.Berkeley.EDU (128.32.37.248)  2.216 ms !X  2.240 ms !X  2.248 ms !X
+
+
+
+
+
+---------------------------------------------------------------------------------
+
+1
+airbears2-10-142-136-146:~ Carina$ host -v m.yelp.com 199.7.83.42
+Trying "m.yelp.com"
+Using domain server:
+Name: 199.7.83.42
+Address: 199.7.83.42#53
+Aliases: 
+
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 27358
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 13, ADDITIONAL: 14
+
+;; QUESTION SECTION:
+;m.yelp.com.			IN	A
+
+;; AUTHORITY SECTION:
+com.			172800	IN	NS	a.gtld-servers.net.
+com.			172800	IN	NS	b.gtld-servers.net.
+com.			172800	IN	NS	c.gtld-servers.net.
+com.			172800	IN	NS	d.gtld-servers.net.
+com.			172800	IN	NS	e.gtld-servers.net.
+com.			172800	IN	NS	f.gtld-servers.net.
+com.			172800	IN	NS	g.gtld-servers.net.
+com.			172800	IN	NS	h.gtld-servers.net.
+com.			172800	IN	NS	i.gtld-servers.net.
+com.			172800	IN	NS	j.gtld-servers.net.
+com.			172800	IN	NS	k.gtld-servers.net.
+com.			172800	IN	NS	l.gtld-servers.net.
+com.			172800	IN	NS	m.gtld-servers.net.
+
+;; ADDITIONAL SECTION:
+a.gtld-servers.net.	172800	IN	A	192.5.6.30
+b.gtld-servers.net.	172800	IN	A	192.33.14.30
+c.gtld-servers.net.	172800	IN	A	192.26.92.30
+d.gtld-servers.net.	172800	IN	A	192.31.80.30
+e.gtld-servers.net.	172800	IN	A	192.12.94.30
+f.gtld-servers.net.	172800	IN	A	192.35.51.30
+g.gtld-servers.net.	172800	IN	A	192.42.93.30
+h.gtld-servers.net.	172800	IN	A	192.54.112.30
+i.gtld-servers.net.	172800	IN	A	192.43.172.30
+j.gtld-servers.net.	172800	IN	A	192.48.79.30
+k.gtld-servers.net.	172800	IN	A	192.52.178.30
+l.gtld-servers.net.	172800	IN	A	192.41.162.30
+m.gtld-servers.net.	172800	IN	A	192.55.83.30
+a.gtld-servers.net.	172800	IN	AAAA	2001:503:a83e::2:30
+
+Received 488 bytes from 199.7.83.42#53 in 195 ms
+Trying "m.yelp.com"
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 5578
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 13, ADDITIONAL: 14
+
+;; QUESTION SECTION:
+;m.yelp.com.			IN	AAAA
+
+;; AUTHORITY SECTION:
+com.			172800	IN	NS	a.gtld-servers.net.
+com.			172800	IN	NS	b.gtld-servers.net.
+com.			172800	IN	NS	c.gtld-servers.net.
+com.			172800	IN	NS	d.gtld-servers.net.
+com.			172800	IN	NS	e.gtld-servers.net.
+com.			172800	IN	NS	f.gtld-servers.net.
+com.			172800	IN	NS	g.gtld-servers.net.
+com.			172800	IN	NS	h.gtld-servers.net.
+com.			172800	IN	NS	i.gtld-servers.net.
+com.			172800	IN	NS	j.gtld-servers.net.
+com.			172800	IN	NS	k.gtld-servers.net.
+com.			172800	IN	NS	l.gtld-servers.net.
+com.			172800	IN	NS	m.gtld-servers.net.
+
+;; ADDITIONAL SECTION:
+a.gtld-servers.net.	172800	IN	A	192.5.6.30
+b.gtld-servers.net.	172800	IN	A	192.33.14.30
+c.gtld-servers.net.	172800	IN	A	192.26.92.30
+d.gtld-servers.net.	172800	IN	A	192.31.80.30
+e.gtld-servers.net.	172800	IN	A	192.12.94.30
+f.gtld-servers.net.	172800	IN	A	192.35.51.30
+g.gtld-servers.net.	172800	IN	A	192.42.93.30
+h.gtld-servers.net.	172800	IN	A	192.54.112.30
+i.gtld-servers.net.	172800	IN	A	192.43.172.30
+j.gtld-servers.net.	172800	IN	A	192.48.79.30
+k.gtld-servers.net.	172800	IN	A	192.52.178.30
+l.gtld-servers.net.	172800	IN	A	192.41.162.30
+m.gtld-servers.net.	172800	IN	A	192.55.83.30
+a.gtld-servers.net.	172800	IN	AAAA	2001:503:a83e::2:30
+
+Received 488 bytes from 199.7.83.42#53 in 179 ms
+Trying "m.yelp.com"
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 62783
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 13, ADDITIONAL: 14
+
+;; QUESTION SECTION:
+;m.yelp.com.			IN	MX
+
+;; AUTHORITY SECTION:
+com.			172800	IN	NS	a.gtld-servers.net.
+com.			172800	IN	NS	b.gtld-servers.net.
+com.			172800	IN	NS	c.gtld-servers.net.
+com.			172800	IN	NS	d.gtld-servers.net.
+com.			172800	IN	NS	e.gtld-servers.net.
+com.			172800	IN	NS	f.gtld-servers.net.
+com.			172800	IN	NS	g.gtld-servers.net.
+com.			172800	IN	NS	h.gtld-servers.net.
+com.			172800	IN	NS	i.gtld-servers.net.
+com.			172800	IN	NS	j.gtld-servers.net.
+com.			172800	IN	NS	k.gtld-servers.net.
+com.			172800	IN	NS	l.gtld-servers.net.
+com.			172800	IN	NS	m.gtld-servers.net.
+
+;; ADDITIONAL SECTION:
+a.gtld-servers.net.	172800	IN	A	192.5.6.30
+b.gtld-servers.net.	172800	IN	A	192.33.14.30
+c.gtld-servers.net.	172800	IN	A	192.26.92.30
+d.gtld-servers.net.	172800	IN	A	192.31.80.30
+e.gtld-servers.net.	172800	IN	A	192.12.94.30
+f.gtld-servers.net.	172800	IN	A	192.35.51.30
+g.gtld-servers.net.	172800	IN	A	192.42.93.30
+h.gtld-servers.net.	172800	IN	A	192.54.112.30
+i.gtld-servers.net.	172800	IN	A	192.43.172.30
+j.gtld-servers.net.	172800	IN	A	192.48.79.30
+k.gtld-servers.net.	172800	IN	A	192.52.178.30
+l.gtld-servers.net.	172800	IN	A	192.41.162.30
+m.gtld-servers.net.	172800	IN	A	192.55.83.30
+a.gtld-servers.net.	172800	IN	AAAA	2001:503:a83e::2:30
+
+Received 488 bytes from 199.7.83.42#53 in 179 ms
+airbears2-10-142-136-146:~ Carina$ host -v m.yelp.com 192.5.6.30
+Trying "m.yelp.com"
+Using domain server:
+Name: 192.5.6.30
+Address: 192.5.6.30#53
+Aliases: 
+
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 3760
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 4, ADDITIONAL: 4
+
+;; QUESTION SECTION:
+;m.yelp.com.			IN	A
+
+;; AUTHORITY SECTION:
+yelp.com.		172800	IN	NS	ns1.p18.dynect.net.
+yelp.com.		172800	IN	NS	ns3.p18.dynect.net.
+yelp.com.		172800	IN	NS	ns2.p18.dynect.net.
+yelp.com.		172800	IN	NS	ns4.p18.dynect.net.
+
+;; ADDITIONAL SECTION:
+ns1.p18.dynect.net.	172800	IN	A	208.78.70.18
+ns3.p18.dynect.net.	172800	IN	A	208.78.71.18
+ns2.p18.dynect.net.	172800	IN	A	204.13.250.18
+ns4.p18.dynect.net.	172800	IN	A	204.13.251.18
+
+Received 178 bytes from 192.5.6.30#53 in 79 ms
+Trying "m.yelp.com"
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 54506
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 4, ADDITIONAL: 4
+
+;; QUESTION SECTION:
+;m.yelp.com.			IN	AAAA
+
+;; AUTHORITY SECTION:
+yelp.com.		172800	IN	NS	ns1.p18.dynect.net.
+yelp.com.		172800	IN	NS	ns3.p18.dynect.net.
+yelp.com.		172800	IN	NS	ns2.p18.dynect.net.
+yelp.com.		172800	IN	NS	ns4.p18.dynect.net.
+
+;; ADDITIONAL SECTION:
+ns1.p18.dynect.net.	172800	IN	A	208.78.70.18
+ns3.p18.dynect.net.	172800	IN	A	208.78.71.18
+ns2.p18.dynect.net.	172800	IN	A	204.13.250.18
+ns4.p18.dynect.net.	172800	IN	A	204.13.251.18
+
+Received 178 bytes from 192.5.6.30#53 in 77 ms
+Trying "m.yelp.com"
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 6156
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 4, ADDITIONAL: 4
+
+;; QUESTION SECTION:
+;m.yelp.com.			IN	MX
+
+;; AUTHORITY SECTION:
+yelp.com.		172800	IN	NS	ns1.p18.dynect.net.
+yelp.com.		172800	IN	NS	ns3.p18.dynect.net.
+yelp.com.		172800	IN	NS	ns2.p18.dynect.net.
+yelp.com.		172800	IN	NS	ns4.p18.dynect.net.
+
+;; ADDITIONAL SECTION:
+ns1.p18.dynect.net.	172800	IN	A	208.78.70.18
+ns3.p18.dynect.net.	172800	IN	A	208.78.71.18
+ns2.p18.dynect.net.	172800	IN	A	204.13.250.18
+ns4.p18.dynect.net.	172800	IN	A	204.13.251.18
+
+Received 178 bytes from 192.5.6.30#53 in 77 ms
+airbears2-10-142-136-146:~ Carina$ host -v m.yelp.com 208.78.70.18
+Trying "m.yelp.com"
+Using domain server:
+Name: 208.78.70.18
+Address: 208.78.70.18#53
+Aliases: 
+
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 47563
+;; flags: qr aa rd; QUERY: 1, ANSWER: 4, AUTHORITY: 4, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;m.yelp.com.			IN	A
+
+;; ANSWER SECTION:
+m.yelp.com.		60	IN	A	199.255.189.34
+m.yelp.com.		60	IN	A	198.51.132.234
+m.yelp.com.		60	IN	A	199.255.189.234
+m.yelp.com.		60	IN	A	198.51.132.34
+
+;; AUTHORITY SECTION:
+yelp.com.		86400	IN	NS	ns2.p18.dynect.net.
+yelp.com.		86400	IN	NS	ns1.p18.dynect.net.
+yelp.com.		86400	IN	NS	ns4.p18.dynect.net.
+yelp.com.		86400	IN	NS	ns3.p18.dynect.net.
+
+Received 178 bytes from 208.78.70.18#53 in 7 ms
+Trying "m.yelp.com"
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 45186
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;m.yelp.com.			IN	AAAA
+
+;; AUTHORITY SECTION:
+yelp.com.		60	IN	SOA	dns3.yelpcorp.com. hostmaster.yelpcorp.com. 2013100300 3600 900 604800 3600
+
+Received 89 bytes from 208.78.70.18#53 in 4 ms
+Trying "m.yelp.com"
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 1054
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;m.yelp.com.			IN	MX
+
+;; AUTHORITY SECTION:
+yelp.com.		60	IN	SOA	dns3.yelpcorp.com. hostmaster.yelpcorp.com. 2013100300 3600 900 604800 3600
+
+Received 89 bytes from 208.78.70.18#53 in 4 ms
+
+
+
+
+
+2
+airbears2-10-142-136-146:webarch2013 Carina$ host m.yelp.com
+m.yelp.com has address 199.255.189.234
+m.yelp.com has address 198.51.132.234
+m.yelp.com has address 198.51.132.34
+m.yelp.com has address 199.255.189.34
+
+
+
+
+
+3
+harbinger:~/webarch2013$ traceroute amplab.cs.berkeley.edu
+traceroute to amplab.cs.berkeley.edu (128.32.37.248), 30 hops max, 60 byte packets
+ 1  g3-35.inr-211-srb.Berkeley.EDU (128.32.78.3)  1.196 ms  1.203 ms  1.226 ms
+ 2  t6-1.inr-202-reccev.Berkeley.EDU (128.32.255.126)  0.892 ms  0.955 ms  1.007 ms
+ 3  evans-eecs-br-10GE.EECS.Berkeley.EDU (128.32.255.54)  5.959 ms  5.926 ms  5.956 ms
+ 4  soda-10g-edge.EECS.Berkeley.EDU (169.229.59.242)  2.864 ms  2.935 ms  2.959 ms
+ 5  www-research2.CS.Berkeley.EDU (128.32.37.248)  2.216 ms !X  2.240 ms !X  2.248 ms !X
