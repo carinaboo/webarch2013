@@ -1,0 +1,40 @@
+
+SELECT
+
+How many links were added afer 2013-10-14?
+
+11
+SELECT * from links WHERE created > "2013-10-14";
+
+
+How many links that were added before 2013-10-14 have fewer than 40 hits?
+
+3
+SELECT * from links WHERE created < "2013-10-14" AND hit_count < 40;
+
+
+
+
+
+INSERT
+
+Insert your own URL with a date before 2013-10-14 with greater than 40 hits.
+
+INSERT into links VALUES ("http://carinaboo.com/ ", "cgboo", 99, "2013-09-30");
+   
+
+Is it possible that someone querying the database at the same time could see your insert partially complete (eg. only see some fields filled in)? What database property is this related to?
+
+Not possible because of "Atomicity: all updates happen or none do" which means either all columns are updates and show up or none do.
+
+
+
+
+
+UPDATE
+
+Increment the hit_count for only your new row. What is the new count?
+
+100
+UPDATE links SET hit_count = "100" WHERE long_url = "http://carinaboo.com/";
+UPDATE links SET hit_count = "100" WHERE short_url = "cgboo";
