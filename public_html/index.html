@@ -1,9 +1,126 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Jim's Page</title>
-    </head>
-    <body>
-        <p>Hello class! This is a tiny HTML page.</p>
-    </body>
+	<head>
+	  	<title>Carina Boo</title>
+	  	<meta name="description" content="Carina Boo's personal website">
+	  	<meta name="author" content="Carina Boo">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/smallscreen.css">
+	</head>
+	<body id="home">
+		<div class="nav">
+			<ul>
+				<li><a href="index.html">Home</a>
+					<ul>
+						<li><a href="index.html#aboutme">About Me</a></li>
+						<li><a href="index.html#favoritethings">Favorite Things</a></li>
+					</ul>
+				</li>
+				<!-- Photos, blog, and contact pages do not exist yet -->
+				<li><a href="photos.html">Photos</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<hr>
+				<li><a href="madlib.html">Mad Libs</a></li>
+				<li><a href="/~carinaboo/server/home">URL Shortener</a></li>
+			</ul>
+		</div>
+		<div class="main">
+			<div itemscope itemtype="http://schema.org/Person">
+				<h1 itemprop="name" id="sitename">
+					Carina Boo
+				</h1>
+				<img itemprop="image" id="faceshot" src="images/carinaboo.jpg" alt="Carina Boo" />	
+				<div id="aboutme">
+					<h2>
+						About Me
+					</h2>
+					<p itemprop="description">
+						I'm a 3rd year undergrad at <span itemprop="affiliation">UC Berkeley</span> majoring in Computer Science.
+					</p>
+					<p>
+						I'm a design and tech fanatic. I enjoy designing useful, delightful web applications. Soon I'll be building them too! I also really like teaching--used to tutor writing at the SLC, taught a Bicycle Repair DeCal, and did web design workshops.
+					</p>
+					<p>
+						I work part-time as a <span itemprop="jobTitle">web designer</span> at <a itemprop="workLocation" href="https://www.rescomp.berkeley.edu/">ResComp</a> here on campus and as a <span itemprop="jobTitle">User Experience Designer</span> at <a itemprop="workLocation" href="http://www.marketo.com/">Marketo</a>, a startup in San Mateo.
+					</p>
+					<p>
+						I'm an avid cyclist, really enjoy doing outdoorsy things (hiking, kayaking, scuba diving!), and love traveling.	
+					</p>
+				</div>
+			</div>
+			<div id="workplaces">
+				<h2>
+					More About Where I Work
+				</h2>
+				<div itemscope itemtype="http://schema.org/Organization" class="workplace" >
+					<image itemprop="logo" class="logo" src="images/rescomp-logo.png" alt="ResComp" />
+					<p itemprop="description">
+						<span itemprop="name">ResComp</span> provide technical support and ensures a secure and reliable network for UC Berkeley students.
+					</p>
+					<a itemprop="url" href="http://www.rescomp.berkeley.edu/">rescomp.berkeley.edu</a>
+					<div itemprop="address">2610 Channing Way 3rd Floor, Berkeley, CA 94720</div>
+				</div>
+				<div itemscope itemtype="http://schema.org/Organization" class="workplace">
+					<image itemprop="logo" class="logo" src="images/marketo-logo.png" alt="Marketo" />
+					<p itemprop="description">
+						<span itemprop="name">Marketo</span> provides easy and powerful marketing automation software with everything a marketer needs: email, social, analytics, lead management, and more.
+					</p>
+					<a itemprop="url" href="http://www.marketo.com/">marketo.com</a>
+					<div itemprop="address">901 Mariners Island Blvd, San Mateo, CA 94404</div>
+				</div>
+			</div>
+			<div id="favoritethings">
+				<h2>
+					Some of My Favorite Things
+				</h2>
+				<div>
+					<div class="activity">
+						<img src="images/singapore.jpg" alt="Singapore" />
+						<div class="title">Traveling</div>
+						<div class="description">
+							I traveled in Malaysia, Thailand, Signapore, and Japan in summer 2011. This shot was in front of <span style="font-style:italic;">The Welcoming Hand of Singapore</span>.
+							<!-- Inline CSS -->
+						</div>
+					</div>
+					<div class="activity">
+						<img src="images/berkeleyproject.jpg" alt="Berkeley Project" />
+						<div class="title">Community Projects</div>
+						<div class="description">
+							I like to get involved in the community. This was last year's Berkeley Project where we helped install steps and clean up a hiking trail.
+						</div>
+					</div>
+					<div class="activity">
+						<img src="images/sunset.jpg" alt="Sunset" />
+						<div class="title">Photography</div>
+						<div class="description">
+							Photography! Most of my shots are of nature and landspaces, but I also enjoy taking pictures of people at events.
+						</div>
+					</div>
+					<div class="activity">
+						<img src="images/hiking.jpg" alt="Hiking" />
+						<div class="title">Hiking</div>
+						<div class="description">
+							I love going on hikes and enjoying the fresh air and scenery. Sometimes I'd take my bunny on my adventures as well.
+						</div>
+					</div>
+					<div class="activity">
+						<img src="images/biking.jpg" alt="Biking in SF" />
+						<div class="title">Biking</div>
+						<div class="description">
+							Bikes are so convinient to get to anywhere around the bay, and they're a thrill to ride. My brothers and I ride together a lot.
+						</div>
+					</div>
+					<div class="activity">
+						<img src="images/farming.jpg" alt="Farming in Malaysia" />
+						<div class="title">Gardening</div>
+						<div class="description">
+							I love watching plants grow. Eating delicious, fresh fruits and vegetables is great plus as well. This was at grandparents' farm in Malaysia.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

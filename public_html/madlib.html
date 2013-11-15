@@ -5,17 +5,71 @@
         <title>Madlib!</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+        <style type="text/css">
+			body {
+				font-family: Verdana, sans-serif;
+				padding: 10px 20px;
+			}
+			h4 {
+				margin: 20px 0 10px 0;
+			}
+			label {
+				display: block;
+			}
+			input[type='submit'] {
+				margin: 20px 0;
+			}
+			img {
+				max-width: 90%;
+			}
+			#madlib-input {
+				width: 49%;
+				float: left;
+			}
+			#madlib-output {
+				width: 49%;
+				float: right;
+			}
+			#madlib-output .user-word {
+				color: #00A3CC;
+			}
+        </style>
     </head>
     <body>
 		<form id="madlib-input">
-			<p>Please Input your answers below!</p>
-			<!-- inputs... -->
+			<img src="images/MadLibs-Logo.png" alt="Mad Libs">
+			<h4>One strange animal</h4>
+			<label>Animal <input type="text" name="animal"></label>
+
+			<h4>Pick a number, any number.</h4>
+			<label>Number <input type="text" name="number"></label>
+
+			<h4>If a tornado was about hit, what would you most likely be doing?</h4>
+			<label for="action">Action</label>
+			<select name="action" id="action">
+				<option value="digging and hiding">digging and hiding</option>
+				<option value="flying high">flying high</option>
+				<option value="bawling">bawling</option>
+				<option value="enjoying life to the fullest">enjoying life to the fullest</option>
+			</select>
+
+			<h4>How do you eat your ice cream?</h4>
+			<label><input type="radio" name="eat" value="devour">devour</label>
+			<label><input type="radio" name="eat" value="lick">lick</label>
+			<label><input type="radio" name="eat" value="politely bite">politely bite</label>
+
+			<h4>Your opinion on bulldogs?</h4>
+			<label><input type="checkbox" value="cute" checked>cute</label>
+			<label><input type="checkbox" value="scary">scary</label>
+			<label><input type="checkbox" value="fun">fun</label>
+
+			<input type="submit" value="Show Me the Mad Lib!">
 		</form>
 		
 		<div id="madlib-output">
 		</div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<!-- Optionally include other scripts
         <script src="js/main.js"></script>
 		-->
@@ -23,10 +77,65 @@
         <!-- You may add Javascript functions below -->
         <script>
 			function validate() {
-				if ($("input:first").val() == "correct") {
-					$("#madlib-output").text("input: correct");
-				} else {
-					alert("Error!");
+
+				var animal = $("input[name='animal']").val();
+				var number = $("input[name='number']").val();
+				var action = $("select[name='action'] option:selected").text();
+				var eat = $("input[name='eat']:checked").val();
+
+				if (!animal) {
+					alert("Error! Please type some text.");
+				}
+				else if (!number) {
+					alert("Error! Please type in a number.");
+				}
+				else if (!$.isNumeric(number)) {
+					alert("Error! " + number + " is not a number.");
+				}
+				else if (!$("input[name='eat']:checked").val()) {
+					alert("Error! Please select at least 1 radio button.");
+				}
+				else if ($("input[type='checkbox']:checked").length == 0) {
+					alert("Error! Please pick at least 1 checkbox.");
+				} 
+				else {
+					var arr = [];
+					$("input[type='checkbox']").each(function() {
+						if ($(this).is(':checked')) {
+							arr.push($(this).val());
+						}
+					});
+					var story = "<p>New species discovered! They look like a cross between a "
+						+ "<span class='user-word'>" + animal + "</span> "
+						+ "and a jellyfish. There are currently "
+						+ "<span class='user-word'>" + number + "</span> "
+						+ "of these species found alive on Earth. "
+						+ "</p>"
+						+ "These creatures are most often seen "
+						+ "<span class='user-word'>" + action + "</span> "
+						+ "in their natural habitat."
+						+ "<p>"
+						+ "If you ever encounter one, take note, when they get frightened, they will likely "
+						+ "<span class='user-word'>" + eat + "</span> "
+						+ "you. But overall we hope these new creatures flourish. We think they are quite "
+						+ "<span class='user-word'>" + arr[0] + "</span>";
+					if (arr.length > 1) {
+						var i = 1;
+						while(i < arr.length) {
+							if (i == arr.length-1) {
+								story = story
+								+ " and "
+								+ "<span class='user-word'>" + arr[i] + "</span>";
+							} else {
+								story = story
+								+ ", <span class='user-word'>" + arr[i] + "</span>";
+							}
+							i++;
+						}
+					}
+					story += ".</p>";
+
+					$("#madlib-output").html(story);
 				}
 				return false;
 			}
