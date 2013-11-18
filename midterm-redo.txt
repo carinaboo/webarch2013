@@ -1,0 +1,22 @@
+3.
+following have semantic meaning independent of style:
+strong, tr, div, table
+
+10.
+209, b/c 200s mean OK. 209 b/c its the next 200s code not used yet, but we could pick a different number
+
+11.
+421, b/c 400s mean client error. 421 b/c 421 is not used yet but it could be a different code if we wanted.
+
+15.
+DNS uses UDP: True
+(the rest of the T/F I got correct)
+Explanation from Wikipedia: DNS primarily uses User Datagram Protocol (UDP) on port number 53 to serve requests. DNS queries consist of a single UDP request from the client followed by a single UDP reply from the server. The Transmission Control Protocol (TCP) is used when the response data size exceeds 512 bytes, or for tasks such as zone transfers. Some resolver implementations use TCP for all queries.
+
+18.
+PUT /student HTTP/1.1
+Host: localhost
+Content-Length: 28
+Content-Type: application/x-www-form-urlencoded
+
+name=Carina%20Boo&class=i253
