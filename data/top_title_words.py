@@ -10,7 +10,11 @@ To run:
 
 To store output:
 
-    python top_title_words.py anonymous-msweb.data > top_title_words.out
+    python top_title_words.py anonymous-msweb.data > top_title_words_unsorted.out
+
+    cat top_title_words_unsorted.out | sort -n -r -k2 > top_title_words_sorted.out
+
+    head -10 top_title_words_sorted.out > top_title_words.out
 """
 
 from mrjob.job import MRJob
