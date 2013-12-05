@@ -1,0 +1,14 @@
+After outputing from map-reduce:
+	cat top_title_words_unsorted.out | sort -n -r -k2 > top_title_words_sorted.out
+	head -10 top_title_words_sorted.out > top_title_words.out
+
+"1008"	10836
+"1034"	9383
+"1004"	8463
+"1018"	5330
+"1017"	5108
+"1009"	4628
+"1001"	4451
+"1026"	3220
+"1003"	2968
+"1025"	2123
